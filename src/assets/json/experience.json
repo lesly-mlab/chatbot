@@ -1,0 +1,95 @@
+{
+    "start": "greeting",
+    "greeting": {
+        "type": "message",
+        "content": "Welcome - to mLab Bot",
+        "next": "letscreate"
+    },
+    "letscreate": {
+        "type": "message",
+        "content": "I just want to get an update on how your business has been doing.",
+        "next": "type"
+    },
+    "type": {
+        "type": "options",
+        "content": "Do you have 10 minutes to chat?",
+        "options": [{
+            "text": "Yes",
+            "value": "yes",
+            "next": "package"
+        },
+        {
+            "text": "No",
+            "value": "no",
+            "next": "package"
+        }]
+    },
+    "package": {
+        "type": "options",
+        "content": "Were there any changes to your team since our last coversation?",
+        "options": [{
+            "text": "Founders",
+            "value": "founders",
+            "next": "linkYou"
+        },
+        {
+            "text": "Employees",
+            "value": "employees",
+            "next": "linkYou"
+        },
+        {
+            "text": "Board of Advisors",
+            "value": "Board of Advisors",
+            "next": "linkYou"
+        }]
+    },
+    "linkYou": {
+        "type": "message",
+        "content": "New total(0 - 10)",
+        "next": "name"
+    },
+    "name": {
+        "type": "question",
+        "fieldType": "text",
+        "content": "How manyPT or FT?",
+        "next": "contact"
+    },
+    "women": {
+        "type": "question",
+        "fieldType": "text",
+        "content": "How many Women?",
+        "next": "email"
+    },
+    "youth": {
+        "type": "question",
+        "fieldType": "text",
+        "content": "How many Youth?",
+        "next": "email"
+    },
+    "blacks": {
+        "type": "question",
+        "fieldType": "text",
+        "content": "How many Blacks?",
+        "next": "email"
+    },
+   
+    "type": {
+        "type": "options",
+        "content": "Any other update on your team?",
+        "options": [{
+            "text": "Yes",
+            "value": "yes",
+            "fieldType": "text",
+            "next": "solutions"
+        },
+        {
+            "text": "No",
+            "value": "no",
+            "next": "solutions"
+        }]
+    },
+    "done": {
+        "type": "message",
+        "content": "Thank you. We will get back to you as soon as possible"
+    }
+}
