@@ -26,6 +26,7 @@ export class ChatForm {
     }
 
     sendFromJson(id, json) {
+
         const message: ChatFormMessage = {
             id: id,
             type: json['type'],

@@ -185,6 +185,7 @@ export class ChatFormComponent implements OnInit {
   }
 
   send() {
+    this.value = this.value.toString();
     let text: string = this.value.trim() // this.editableDiv.nativeElement.innerText.trim()
 
     if (text.length == 0)

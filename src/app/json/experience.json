@@ -28,7 +28,7 @@
 
     "selectdate": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "date",
         "content": "On which day would be more suitable for us to continue with our conversation?",
         "next": "done"
     },
@@ -60,83 +60,83 @@
 
     "totalFounders": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total number of founders?",
         "next": "womenFounders"
     },
   
     "womenFounders": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many founders are women?",
         "next": "blackFounders"
     },
 
     "blackFounders": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many founders are Black(based on BBBEE guidelines)?",
         "next": "feedbackMessage"
     },
 
     "totalEmployees": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total number of Employees?",
         "next": "womenEmployees"
     },
   
     "womenEmployees": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many employees are women?",
         "next": "blackEmployees"
     },
     
     "blackEmployees": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many employees are Black(based on BBBEE guidelines)?",
         "next": "feedbackMessage"
     },
 
     "totFounders": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total number of founders?",
         "next": "women_Founders"
     },
   
     "women_Founders": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many founders are women?",
         "next": "black_Founders"
     },
 
     "black_Founders": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many founders are Black(based on BBBEE guidelines)?",
         "next": "tot_Employees"
     },
     "tot_Employees": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total number of Employees?",
         "next": "women_Employees"
     },
   
     "women_Employees": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many employees are women?",
         "next": "black_Employees"
     },
     
     "black_Employees": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "How many employees are Black(based on BBBEE guidelines)?",
         "next": "feedbackMessage"
     },
@@ -155,14 +155,14 @@
     },
     "totalUsers": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total users reached?",
         "next": "totalActiveUsers"
     },
 
     "totalActiveUsers": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total active users to date?",
         "next": "financeSection"
     },
@@ -175,21 +175,21 @@
 
     "totalRevenue": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total revenue to date?",
         "next": "totalCapital"
     },
 
     "totalCapital": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total capital to date?",
         "next": "totalFunds"
     },
 
     "totalFunds": {
         "type": "question",
-        "fieldType": "text",
+        "fieldType": "number",
         "content": "Total funds leveraged to date e.g grants, prizes, equity, loans?",
         "next": "highlightsSection"
     },
