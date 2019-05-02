@@ -8,10 +8,10 @@
     "letscreate": {
         "type": "message",
         "content": "I just want to get an update on how your business has been doing",
-        "next": "question"
+        "next": "time"
     },
 
-    "question": {
+    "time": {
         "type": "options",
         "content": "Do you have 10min to chat?",
         "options": [{
@@ -100,41 +100,34 @@
         "next": "feedbackMessage"
     },
 
-    "totFounders": {
+    "totFounder": {
         "type": "question",
         "fieldType": "number",
         "content": "Total number of founders?",
-        "next": "women_Founders"
-    },
-  
-    "women_Founders": {
-        "type": "question",
-        "fieldType": "number",
-        "content": "How many founders are women?",
-        "next": "black_Founders"
+        "next": "black_Founder"
     },
 
-    "black_Founders": {
+    "black_Founder": {
         "type": "question",
         "fieldType": "number",
         "content": "How many founders are Black(based on BBBEE guidelines)?",
-        "next": "tot_Employees"
+        "next": "tot_Emp"
     },
-    "tot_Employees": {
+    "tot_Emp": {
         "type": "question",
         "fieldType": "number",
         "content": "Total number of Employees?",
-        "next": "women_Employees"
+        "next": "women_Emp"
     },
   
-    "women_Employees": {
+    "women_Emp": {
         "type": "question",
         "fieldType": "number",
         "content": "How many employees are women?",
-        "next": "black_Employees"
+        "next": "black_Emp"
     },
     
-    "black_Employees": {
+    "black_Emp": {
         "type": "question",
         "fieldType": "number",
         "content": "How many employees are Black(based on BBBEE guidelines)?",
@@ -250,6 +243,10 @@
 
     "done": {
         "type": "message",
-        "content": "Thanks for taking the time to chat with me, I loook forward to hear about your growth in our next chat. Bye for now.."
+        "content": "Thanks for taking the time to chat with me, I look forward to hear about your growth in our next chat. Bye for now..",
+        "next": "submit"
+    },
+    "submit": {
+        "type": "action"
     }
 }

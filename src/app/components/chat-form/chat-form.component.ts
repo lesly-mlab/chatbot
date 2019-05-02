@@ -7,6 +7,8 @@ import { IonDatetime, IonSelect, Platform, NavController, Events } from '@ionic/
 import { ChatFormInterface } from 'src/app/chat-engine/chat-form-interface';
 // import * as json from '../../../assets/json/insurance/funeral.json';
 import * as moment from 'moment';
+import { FirebaseService } from 'src/app/services/firebase.service';
+import { SaveService } from 'src/app/services/save.service';
 
 @Component({
   selector: 'chat-form',
@@ -22,7 +24,9 @@ export class ChatFormComponent implements OnInit {
   date
   time
   now
-  value = ''
+  value = '';
+  answers = [];
+  currentQuestion;
 
   @Input() listener: ChatFormInterface;
   @Input() form
@@ -35,7 +39,7 @@ export class ChatFormComponent implements OnInit {
   @ViewChild('dropdown') dropdown: IonSelect;
   height
 
-  constructor(private platform: Platform, private navCtrl: NavController, private events: Events) { 
+  constructor(private answersSrvc : SaveService,private platform: Platform, private navCtrl: NavController, private events: Events) { 
     this.platform.ready().then(() => {
       this.height = this.platform.height() - 150;
     })
@@ -188,6 +192,17 @@ export class ChatFormComponent implements OnInit {
     this.value = this.value.toString();
     let text: string = this.value.trim() // this.editableDiv.nativeElement.innerText.trim()
 
+    //sconsole.log();
+    
+    this.answers.push(
+      {
+        question : this.chatForm.currentMessage.content,
+        answers : this.value
+      }
+    );
+
+    console.table(this.answers);
+    
     if (text.length == 0)
       return
 
@@ -195,6 +210,12 @@ export class ChatFormComponent implements OnInit {
       this.chatForm.sendMessage(text, true, this.dropdown.value.value)
     } else {
       this.chatForm.sendMessage(text, true);
+    }
+    
+    if(this.chatForm.currentMessage.next == null){
+      console.log('kjdjhdhdgdg');
+      this.answersSrvc.saveData(this.answers);
+      
     }
 
     this.gotToBottom()

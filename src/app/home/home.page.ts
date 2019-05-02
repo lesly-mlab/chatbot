@@ -23,11 +23,17 @@ export class HomePage implements ChatFormInterface {
   chatReady() {
     this.chatForm.setChatListener(this) 
     this.chatForm.start()
+
+    
   }
 
   callAction(action: any, formValues: any) {
     // Actions called here
     // throw new Error("Method not implemented.");
+    console.log(action)
+    if (action == 'submit') {
+      console.log(formValues)
+    }
   }
   dropdownList(id: any, formValues: any): Promise<{ name: string; value: string; }[]> | import("rxjs").Observable<{ name: string; value: string; }[]> | { name: string; value: string; }[] {
     // Dropdown Lists done here
